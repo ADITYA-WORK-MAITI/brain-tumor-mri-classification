@@ -4,9 +4,9 @@ Binary classification of brain MRI scans (tumor / no tumor) with a hand-built
 image-processing pipeline: denoising, contrast enhancement, K-Means and Otsu
 segmentation, GLCM and HOG feature extraction, and an SVM classifier.
 
-The project reimplements the method of the paper *"Image Processing based Brain
-Tumor Detection"* (ResearchGate, 2023). It then tests two variants that address
-weaknesses found in the original design. Every image-processing algorithm is
+The project reimplements the method of Varshney et al., *"Image Processing based
+Brain Tumor Detection"* (IEEE ICFIRTP 2022, [doi:10.1109/ICFIRTP56122.2022.10059426](https://doi.org/10.1109/ICFIRTP56122.2022.10059426)).
+It then tests two variants that address weaknesses found in the original design. Every image-processing algorithm is
 implemented from scratch with NumPy. OpenCV is used only to read and resize
 images, and scikit-learn only for the SVM and the evaluation.
 
@@ -143,6 +143,16 @@ See [`data/README.md`](data/README.md).
   exactly to gray matter, white matter, CSF and tumor.
 * HOG on a global Otsu mask describes the overall shape of the brain and the
   bright regions inside it. It does not localise the tumor.
+
+## References
+
+1. S. Varshney, S. K. Prajapati, S. Rajput, M. Kaur, N. Rakesh and M. K. Goyal,
+   "Image Processing based Brain Tumor Detection," *2022 International Conference
+   on Fourth Industrial Revolution Based Technology and Practices (ICFIRTP)*,
+   Uttarakhand, India, 2022, pp. 204–209.
+   [doi:10.1109/ICFIRTP56122.2022.10059426](https://doi.org/10.1109/ICFIRTP56122.2022.10059426)
+2. N. Chakrabarty, "Brain MRI Images for Brain Tumor Detection," Kaggle dataset.
+   <https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection>
 
 ## Authors
 
